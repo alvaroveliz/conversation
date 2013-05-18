@@ -1,197 +1,55 @@
 /* Init Perkins */
 @import "assets/_core";
-
-/* Perkins Bowties */
-// Import the Configurable Grid System
-@import "assets/_grid";
-
-// Import Feedback helpers .notice, .success, .error, etc...
-@import "assets/_feedback";
-
-// Import the styles for forms (ul.form>li>label+input)
-@import "assets/_form";
-
-// Import styles for tables (responsive too)
-@import "assets/_table";
-
-// When using Perkins with jQuery UI
-// @import "assets/_ui";
+@import "http://fonts.googleapis.com/css?family=Roboto:400,700";
 
 /* Perkins External Bowties */
 @import "icons/_icons";
 
-/**
-*  Start building the next web here, Sir
-*/
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
-@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
-
-@p-sans: 'Merriweather Sans', 'Helvetica', 'Arial';
-@p-headings : 'Didact Gothic';
-
-// first pallete
-@p-dark: #4D1130;
-@p-light: #E2B98C;
-@p-lighten: #FDF4E1;
-@p-bg: #F3EADC;
-
-// second pallete
-@p-bg: #FFF;
-@p-light2: #E9BF8F;
-@p-dark: #972A3F;
-@p-middle: #CA4F52;
-@p-light: #DAC896;
-@p-lighten: #EDE9BA;
-
-.row {
-  width: 960px;
-  padding: 20px;
-}
+@p-sans: 'Roboto', sans-serif;
 
 body {
-  background: @p-bg;
+  background: #111 url(../images/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgba(255,255,255,0.60);
+  padding: 50px;
+  .box-sizing();
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-section#holder {
-  .row();
-  #home {
-    .grid(10);
-    overflow: hidden;
-    h1 {
-      color: @p-dark;
-      font-size: 60px;
-      .text-shadow();
-      padding: 0px;
-    }
-    h2 {
-      font-size: 25px;
-      text-transform: uppercase;
-    }
-    h3 {
-      padding: 10px 0;
-      color: @p-gray;
-    }
+#write {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  input {
+    width: 100%;
+    border: none;
+    .font-size(35);
+    padding: 25px 40px;
+    background: rgba(0,0,0,0.80);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
   }
-  #connect {
-    h1 {
-      text-align: center;
-      padding-top: 110px;
-      a {
-        #gradient > .vertical(@p-dark, darken(@p-dark, 12%));
-        padding: 10px 20px;
-        color: @p-lighten;
-        .text-shadow(1px 1px 1px @p-black);
-        .border-radius(10px);
-        .box-shadow();
-        &:hover {
-          #gradient > .vertical(@p-dark, @p-dark);
-          .box-shadow(1px 1px 10px @p-middle);
-        }
-      }
-    }
+  .f-btn {
+    background: #0065B3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 26px;
+    .font-size(40);
+    color: rgba(255,255,255,0.3);
   }
 }
 
-section#services {
-  background: @p-lighten;
-  overflow: hidden;
-  .box-shadow(inset 1px 1px 10px lighten(@p-gray, 20%));
-  #services-main {
-    .row();
-    .service-info {
-      .grid(8);
-      padding: 20px;
-      h4 {
-      }
-    }
-  }
-}
-
-section#content {
-  background: @p-lighten;
-  #mainContent {
-    .row();
-    ul#photoList {
-      .h-menu();
-      li {
-        a {
-          padding: 10px;
-          img {
-            .box-shadow();
-            opacity: 0.5;
-          }
-          &:hover {
-            img {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-
-    #productsHolder {
-      .product {
-        .grid(8);
-        a {
-          display: block;
-          margin: 10px;
-          padding: 35px 10px;
-          background: rgba(255, 255, 255, 0.8);
-          text-align: center;
-          .box-shadow();
-          .border-radius(20px);
-          .big-icon {
-            font-size: 140px;
-            color: @p-dark;
-            .text-shadow(1px 1px 1px @p-black);
-            margin-left: -30px;
-            &.big-icon-2 {
-              margin-left: 0;
-            }
-          }
-          .product-name {
-            text-align: center;
-            color: @p-dark;
-          }
-          &:hover {
-            background: @p-dark;
-            .big-icon, .product-name {
-              color: @p-white !important;
-            }
-          }
-        }
-      }
-    }
-  } 
-}
-
-footer {
-  background: @p-dark;
-  overflow: hidden;
-  #copyright {
-    .row();
-    padding: 20px;
-    #footer-menu {
-      .grid(16);
-      ul {
-        .h-menu();
-        width: 500px;
-        margin: 0 auto;
-        li {
-          a {
-            font-size: 12px;
-            color: @p-lighten;
-            .text-shadow(1px 1px 1px @p-black);
-            &:hover {
-              color: @p-light;
-            }
-          }
-        }
-      }
-    }
+#center {
+  width: 500px;
+  padding: 30px;
+  background: rgba(0,0,0,0.80);
+  margin: 0 auto;
+  .box-shadow();
+  p {
+    .font-size(10);
   }
 }
