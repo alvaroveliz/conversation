@@ -1,15 +1,13 @@
 {
   "name": "conversation",
-  "version": "0.1",
+  "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
   "dependencies": {
+    "express": "*",
     "require": "*",
     "connect": "",
     "mongoose":"*",
-    "express": "3.2.0",
+    "request":"*",
     "jade": "*",
     "less-middleware": "*"
   }
