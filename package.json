@@ -8,6 +8,7 @@
     "connect": "",
     "mongoose":"*",
     "request":"*",
+    "twitter-oauth":"*",
     "jade": "*",
     "less-middleware": "*"
   }
